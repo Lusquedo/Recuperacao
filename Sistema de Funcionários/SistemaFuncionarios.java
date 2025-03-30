@@ -46,8 +46,8 @@ class Desenvolvedor extends Funcionario {
 
 public class SistemaFuncionarios {
     public static void main(String[] args) {
-        Gerente g = new Gerente("João Silva", 60, 9000.00, "T.I");
-        Desenvolvedor d = new Desenvolvedor("Maria Santos", 30, 6000.00, "Java");
+        Gerente g = new Gerente("João da Silva", 60, 9000.00, "T.I");
+        Desenvolvedor d = new Desenvolvedor("Maria dos Santos", 30, 6000.00, "Java");
 
         System.out.println("Informações do Gerente:");
         g.exibirInformacoes();
