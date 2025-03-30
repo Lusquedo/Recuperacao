@@ -1,45 +1,44 @@
 class Forma {
-    protected String nome;
+    String nome;
 
-    public Forma(String nome) {
+    Forma(String nome) {
         this.nome = nome;
     }
 
-    public void exibirNome() {
+    void exibirNome() {
         System.out.println("Forma: " + nome);
     }
 }
 
 class Circulo extends Forma {
-    private double raio;
+    double raio;
 
-    public Circulo(double raio) {
+    Circulo(double raio) {
         super("Círculo");
         this.raio = raio;
     }
 
-    public double calcularArea() {
-        return Math.PI * Math.pow(raio, 2);
+    double calcularArea() {
+        return 3.14 * (raio * raio);
     }
 }
 
 class Retangulo extends Forma {
-    protected double largura;
-    protected double altura;
+    double largura, altura;
 
-    public Retangulo(double largura, double altura) {
+    Retangulo(double largura, double altura) {
         super("Retângulo");
         this.largura = largura;
         this.altura = altura;
     }
 
-    public double calcularArea() {
+    double calcularArea() {
         return largura * altura;
     }
 }
 
 class Quadrado extends Retangulo {
-    public Quadrado(double lado) {
+    Quadrado(double lado) {
         super(lado, lado);
         this.nome = "Quadrado";
     }
@@ -47,20 +46,20 @@ class Quadrado extends Retangulo {
 
 public class Formas {
     public static void main(String[] args) {
-        Circulo circulo = new Circulo(5);
-        Retangulo retangulo = new Retangulo(4, 6);
-        Quadrado quadrado = new Quadrado(4);
+        Circulo c = new Circulo(5);
+        Retangulo r = new Retangulo(4, 6);
+        Quadrado q = new Quadrado(4);
 
         System.out.println("--- Formas Geométricas ---");
-        circulo.exibirNome();
-        System.out.println("Área: " + circulo.calcularArea());
+        c.exibirNome();
+        System.out.println("Área: " + c.calcularArea());
         System.out.println();
 
-        retangulo.exibirNome();
-        System.out.println("Área: " + retangulo.calcularArea());
+        r.exibirNome();
+        System.out.println("Área: " + r.calcularArea());
         System.out.println();
 
-        quadrado.exibirNome();
-        System.out.println("Área: " + quadrado.calcularArea());
+        q.exibirNome();
+        System.out.println("Área: " + q.calcularArea());
     }
 }
